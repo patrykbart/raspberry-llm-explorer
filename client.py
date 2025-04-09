@@ -8,8 +8,8 @@ from PIL import Image
 import io
 
 PROMPT = "What is in this picture?"
-URL = "http://192.168.0.109:12345/infer"
-CAPTURE_INTERVAL = 5  # seconds
+URL = "http://192.168.0.121:12345/infer"
+CAPTURE_INTERVAL = 3  # seconds
 
 # Setup logging
 logging.basicConfig(
