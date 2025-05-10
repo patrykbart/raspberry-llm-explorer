@@ -31,7 +31,18 @@ def register_infer(app):
                 model=MODEL_NAME,
                 prompt=prompt,
                 images=[image_b64],
-                format=command_schema
+                format=command_schema,
+                options={
+                "temperature": 0.8,
+                "seed": None,
+                "num_ctx": 8192,
+                "repeat_penalty": 1.2,
+                "repeat_last_n": 128,
+                "top_k": 50,
+                "top_p": 0.95,
+                "presence_penalty": 1.0,
+                "frequency_penalty": 0.5
+                }
             )
             logger.info(f"[o] Decyzja LLaMA: {response.response}")
 
